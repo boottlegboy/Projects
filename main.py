@@ -105,7 +105,7 @@ def main():
                 })
         print(f"Transfer complete. {len(unmatched)} songs unmatched → unmatched.csv")
     else:
-        print("Transfer complete. All songs matched 🎉")
+        print("Transfer complete. All songs matched ")
 
 if __name__ == "__main__":
     main()
