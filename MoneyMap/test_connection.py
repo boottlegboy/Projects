@@ -2,7 +2,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import certifi
 
-uri = "mongodb+srv://jesusdiaz1403:b1mRAtZw3MK5Q5eO@moneymap.mpksh.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://jesusdiaz1403:***********@moneymap.mpksh.mongodb.net/?retryWrites=true&w=majority"
 
 try:
     client = MongoClient(
