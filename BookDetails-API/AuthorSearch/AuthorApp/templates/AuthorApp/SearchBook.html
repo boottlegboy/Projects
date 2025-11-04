@@ -1,0 +1,17 @@
+<!-- AuthorApp/templates/AuthorApp/books_by_author.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books by Author</title>
+</head>
+<body>
+    <h1>Books by {{ author.name }}</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'search_author' %}">Back to Search</a>
+</body>
+</html>

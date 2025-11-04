@@ -1,0 +1,26 @@
+<!-- AuthorApp/templates/AuthorApp/search_author.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search for an Author</title>
+</head>
+<body>
+    <h1>Search for an Author</h1>
+    <form method="post" action="{% url 'search_author' %}">
+        {% csrf_token %}
+        <label for="author_name">Author Name:</label>
+        <input type="text" name="author_name" id="author_name" placeholder="Enter author's name">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if authors %}
+        <h2>Authors Found:</h2>
+        <ul>
+            {% for author in authors %}
+                <li><a href="{% url 'books_by_author' author.id %}">{{ author.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
